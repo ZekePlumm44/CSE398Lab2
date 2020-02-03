@@ -1,14 +1,17 @@
 #include <wiringPi.h>
 #include <stdio.h>
-#include <stdlib.b>
+#include <stdlib.h>
 
-int main() {
-    if(wiringPiSetup() == -1) {
+int main()
+{
+    if (wiringPiSetup() == -1)
+    {
         exit(1);
     }
     pinMode(7, OUTPUT);
-    while(1) {
-        digitalWrite(7,0);
-        digitalWrite(7,1);
+    while (1)
+    {
+        digitalWrite(7, 0);
+        digitalWrite(7, 1);
     }
 }
