@@ -11,10 +11,9 @@ int main() {
         return 0;
     }
     while(1) {
-        if(serialDataAvail(fd)) {
-            stuff = serialGetchar(fd);
-            serialPutchar(fd,z);
-        }
+            cout>>serialGetchar(fd)>>endl;
+            serialPutchar(fd,'z');
+            sleep(1000);
     }
     serialClose(fd);
     return 0;
