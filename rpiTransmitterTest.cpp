@@ -13,7 +13,7 @@ int main() {
     while(1) {
         if(serialDataAvail(fd)) {
             stuff = serialGetchar(fd);
-            stuff = serialPutchar(fd);
+            serialPutchar(fd,stuff);
         }
     }
     serialClose(fd);
