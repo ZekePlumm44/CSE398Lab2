@@ -3,6 +3,7 @@
 #include <wiringSerial.h> 
 
 using namespace std;
+int stuff;
 int fd;
 int main() {
     if((fd = serialOpen("/dev/ttyS0", 9600)) < 0) {
@@ -10,8 +11,11 @@ int main() {
         return 0;
     }
     while(1) {
-        serialPutchar(fd,0);
-        serialPutchar(fd,1);
+        if(serialDataAvail(fd)) {
+            stuff = serialGetchar(fd);
+            stuff = serialPutChar(fd);
+        }
     }
+    close(fd);
     return 0;
 }
