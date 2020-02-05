@@ -3,7 +3,7 @@
 #include <wiringSerial.h> 
 
 using namespace std;
-int pin = 7;
+int pin = 14;
 int fd;
 int main() {
     if((fd = serialOpen("/dev/ttyS0", 9600)) < 0) {
