@@ -16,6 +16,6 @@ int main() {
             stuff = serialPutChar(fd);
         }
     }
-    close(fd);
+    serialClose(fd);
     return 0;
 }
