@@ -11,8 +11,8 @@ int main() {
         return 0;
     }
     while(1) {
-        serialPutchar(fd,'0');
-        serialPutchar(fd,'1');
+        serialPutchar(fd,0);
+        serialPutchar(fd,1);
     }
     return 0;
 }
